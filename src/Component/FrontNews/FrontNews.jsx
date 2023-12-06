@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import FrontNewsLeftCol from '../FrontNewsLeftCol/FrontNewsLeftCol';
 import FrontNewsRightCol from '../FrontNewsRightCol/FrontNewsRightCol';
+import { Link } from 'react-router-dom';
 
 const FrontNews = () => {
     const [allNews, setAllNews] = useState([])
@@ -28,7 +29,20 @@ const FrontNews = () => {
                     <FrontNewsLeftCol businessNews={businessNews}></FrontNewsLeftCol>
                 </Col>
                 <Col lg={6}>
-                    <h2>Total news in heading {businessNews.length}</h2>
+                    {
+                        allNews.map(news => <>
+                            <Link className='text-decoration-none' to="/news/:id">
+                                <Card className='mb-4'>
+                                    <Card.Img variant="top" src={news.image_url} />
+                                    <Card.Body>
+                                        <Card.Text className='text-center fw-bold '>
+                                            {news.title}
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </Link>
+                        </>).slice(0, 2)
+                    }
 
 
 
