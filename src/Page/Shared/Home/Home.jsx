@@ -1,9 +1,10 @@
 import React from 'react';
+import FrontNews from '../../../Component/FrontNews/FrontNews';
 
 const Home = () => {
     return (
-        <div>
-            <h2>This is Home page</h2>
+        <div className='border-bottom mb-4'>
+            <FrontNews></FrontNews>
         </div>
     );
 };
