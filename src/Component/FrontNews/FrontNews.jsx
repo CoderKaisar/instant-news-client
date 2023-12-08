@@ -23,7 +23,7 @@ const FrontNews = () => {
 
     return (
         <div className='bg-warning py-4 rounded-3'>
-            <Container >
+            <Container>
                 <Row>
                     <Col lg={3}>
                         <FrontNewsLeftCol businessNews={businessNews}></FrontNewsLeftCol>
