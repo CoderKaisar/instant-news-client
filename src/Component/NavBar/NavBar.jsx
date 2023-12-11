@@ -20,8 +20,13 @@ const NavBar = () => {
                 <Nav.Link href="#pricing">টিউব</Nav.Link>
             </Nav>
             <div className='d-flex gap-4'>
-                <Nav.Link href="#pricing">লগইন</Nav.Link>
-                <Nav.Link href="#pricing">নিবন্ধন</Nav.Link>
+                <Link to="/register" className='text-decoration-none'>
+                    <Nav.Link href="#pricing">নিবন্ধন</Nav.Link>
+                </Link>
+                <Link to="/login" className='text-decoration-none'>
+                    <Nav.Link href="#pricing">লগইন</Nav.Link>
+                </Link>
+
             </div>
         </div>
     );
