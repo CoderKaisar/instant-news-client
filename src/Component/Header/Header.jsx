@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TopNav from '../TopNav/TopNav';
 import { Container } from 'react-bootstrap';
 import NavBar from '../NavBar/Navbar';
 import logo from "../../assets/images/logo.png"
 import Marquee from 'react-fast-marquee';
 import { GoChecklist } from "react-icons/go";
+import { AuthContext } from '../../Provider/AuthProvider';
 
 
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <Container>
             <TopNav></TopNav>
